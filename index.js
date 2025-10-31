@@ -7,6 +7,14 @@
 // API: People in Space (Open Notify)
 //
 // 1. Create a function called fetchPeopleInSpace.
+let url1 = "http://api.open-notify.org/astros.json";
+
+async function fetchPeopleInSpace(url) {
+  const response = await fetch(url)
+  const data = await response.json()
+  console.log(data)
+}
+fetchPeopleInSpace(url1)
 // 2. Look up the documentation for the "People in Space" API.
 // 3. Write a fetch request to get a list of people currently in space.
 // 4. Convert the response to JSON.
@@ -23,6 +31,14 @@
 // API: NASA APOD
 //
 // 1. Create a function called fetchAPOD.
+let url2 = "https://api.nasa.gov/planetary/apod?api_key=Us9tCth95cEVQ0UfxUuyWSbIEdWqq0Y3jhmAcZKN";
+
+async function fetchAPOD(url) {
+  const response = await fetch(url)
+  const data = await response.json()
+  console.log(data)
+}
+fetchAPOD(url2)
 // 2. Read the documentation for the APOD API on api.nasa.gov.
 // 3. Your query should include:
 //    - your API key
@@ -41,6 +57,14 @@
 // API: NASA Mars Rover Photos
 //
 // 1. Create a function called fetchMarsPhotos.
+let url3 = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2020-07-01&api_key=Us9tCth95cEVQ0UfxUuyWSbIEdWqq0Y3jhmAcZKN";
+
+async function fetchMarsPhotos(url) {
+  const response = await fetch(url)
+  const data = await response.json()
+  console.log(data)
+}
+fetchMarsPhotos(url3)
 // 2. Read the documentation for the Mars Rover Photos API on api.nasa.gov.
 // 3. Your query should include:
 //    - the name of the rover (for example, Curiosity)
@@ -53,13 +77,19 @@
 // CALL IT
 
 
-
-
-
 // -----------------------------------------------------
 // TASK 4: NASA Image and Video Library
 // API: NASA Image and Video Library
-//
+
+let url4 = "https://images-api.nasa.gov/search?q=Orion%20Nebula&media_type=image";
+
+async function fetchNasaImage(url) {
+  const response = await fetch(url)
+  const data = await response.json()
+  console.log(data)
+}
+
+fetchNasaImage(url4)
 // 1. Create a function called fetchNasaImage.
 // 2. Read the documentation for the NASA Image and Video Library API.
 // 3. Your query should include:
@@ -70,8 +100,3 @@
 // 6. Then, log the title and image URL of the first result.
 // -----------------------------------------------------
 // CALL IT
-
-
-
-
-
